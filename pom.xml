@@ -139,7 +139,7 @@
                 </configuration>
             </plugin>
             
-            <!--maven代码生成工具  -->
+            <!--maven代码生成工具  mybatis-generator:generate-->
             <plugin>  
                 <groupId>org.mybatis.generator</groupId>  
                 <artifactId>mybatis-generator-maven-plugin</artifactId>  
