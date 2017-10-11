@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author JE哥
+ * @author JE鍝�
  * @email 1272434821@qq.com
- * @description:看看spring-boot的强大和方便
+ * @description:鐪嬬湅spring-boot鐨勫己澶у拰鏂逛究
  */
 @Controller
 public class HelloWorldController {

@@ -18,111 +18,186 @@
 	    padding-right: 0;
 	    padding-left: 0;
 	} */
+	
+	.row{
+		margin-top: 1%;
+	}
+	
+	.a{
+	padding: 2px;
+}
 </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-	<div class="container-fluid">
-	<nav class="navbar navbar-default" role="navigation">
-	<div class="container-fluid"> 
-	<div class="navbar-header">
-		<a class="navbar-brand" href="#">菜鸟教程</a>
-	</div>
-	<form class="navbar-form navbar-left" role="search">
-		<div class="form-group">
-			<input type="text" class="form-control" placeholder="Search">
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-2 column">
+			<img alt="140x140" src="http://ibootstrap-file.b0.upaiyun.com/lorempixel.com/140/140/default.jpg" />
 		</div>
-		<button type="submit" class="btn btn-default">提交</button>
-	</form>
-	</div>
-</nav>
-	<div class="row-fluid">
-		<div class="span12">
-			<!-- <ul class="nav nav-tabs">
-				<li>
-					 <a href="#">首页</a>
-				</li>
+		<div class="col-md-6 column">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="#">Brand</a>
+				</div>
 				
-				<li>
-					 <a href="#">首页</a>
-				</li>
-				<li>
-					 <a href="#">资料</a>
-				</li>
-				<li class="disabled">
-					 <a href="#">信息</a>
-				</li>
-				<li class="dropdown pull-right">
-					 <a href="#" data-toggle="dropdown" class="dropdown-toggle">下拉<strong class="caret"></strong></a>
-					<ul class="dropdown-menu">
-						<li>
-							 <a href="#">操作</a>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							 <a href="#">Link</a>
 						</li>
 						<li>
-							 <a href="#">设置栏目</a>
+							 <a href="#">Link</a>
 						</li>
-						<li>
-							 <a href="#">更多设置</a>
-						</li>
-						<li class="divider">
-						</li>
-						<li>
-							 <a href="#">分割线</a>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									 <a href="#">Action</a>
+								</li>
+								<li>
+									 <a href="#">Another action</a>
+								</li>
+								<li>
+									 <a href="#">Something else here</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									 <a href="#">Separated link</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									 <a href="#">One more separated link</a>
+								</li>
+							</ul>
 						</li>
 					</ul>
-				</li>
-			</ul> -->
-			<div class="carousel slide" id="carousel-325686">
+					<!-- <ul class="nav navbar-nav navbar-right">
+						<li>
+							 <a href="#">Link</a>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									 <a href="#">Action</a>
+								</li>
+								<li>
+									 <a href="#">Another action</a>
+								</li>
+								<li>
+									 <a href="#">Something else here</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									 <a href="#">Separated link</a>
+								</li>
+							</ul>
+						</li>
+					</ul> -->
+				</div>
+				
+			</nav>
+		</div>
+		<div class="col-md-4 column">
+			 <form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" />
+						</div> <button type="submit" class="btn btn-default">Submit</button>
+					</form>
+		</div>
+	</div>
+	</div>
+	<div class="container-fiuled">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="carousel slide" id="carousel-12260">
 				<ol class="carousel-indicators">
-					<li class="active" data-slide-to="0" data-target="#carousel-325686">
+					<li class="active" data-slide-to="0" data-target="#carousel-12260">
 					</li>
-					<li data-slide-to="1" data-target="#carousel-325686">
+					<li data-slide-to="1" data-target="#carousel-12260">
 					</li>
-					<li data-slide-to="2" data-target="#carousel-325686">
+					<li data-slide-to="2" data-target="#carousel-12260">
 					</li>
 				</ol>
 				<div class="carousel-inner">
 					<div class="item active">
-						<img alt="" src="${baseurl }/static/img/default.jpg" />
+						<img alt="" src="${baseurl }/static/img/default.jpg" style="width: 100%;"/>
 						<div class="carousel-caption">
 							<h4>
-								棒球
+								First Thumbnail label
 							</h4>
 							<p>
-								棒球运动是一种以棒打球为主要特点，集体性、对抗性很强的球类运动项目，在美国、日本尤为盛行。
+								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
 							</p>
 						</div>
 					</div>
 					<div class="item">
-						<img alt="" src="${baseurl }/static/img/default1.jpg" />
+						<img alt="" src="${baseurl }/static/img/default.jpg" style="width: 100%;"/>
 						<div class="carousel-caption">
 							<h4>
-								冲浪
+								Second Thumbnail label
 							</h4>
 							<p>
-								冲浪是以海浪为动力，利用自身的高超技巧和平衡能力，搏击海浪的一项运动。运动员站立在冲浪板上，或利用腹板、跪板、充气的橡皮垫、划艇、皮艇等驾驭海浪的一项水上运动。
+								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
 							</p>
 						</div>
 					</div>
 					<div class="item">
-						<img alt="" src="${baseurl }/static/img/default2.jpg" />
+						<img alt="" src="${baseurl }/static/img/default.jpg" style="width: 100%;"/>
 						<div class="carousel-caption">
 							<h4>
-								自行车
+								Third Thumbnail label
 							</h4>
 							<p>
-								以自行车为工具比赛骑行速度的体育运动。1896年第一届奥林匹克运动会上被列为正式比赛项目。环法赛为最著名的世界自行车锦标赛。
+								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
 							</p>
 						</div>
 					</div>
-				</div> <a data-slide="prev" href="#carousel-325686" class="left carousel-control">‹</a> <a data-slide="next" href="#carousel-325686" class="right carousel-control">›</a>
+				</div> <a class="left carousel-control" href="#carousel-12260" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-12260" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 			</div>
-			<blockquote>
-				<p>
-					github是一个全球化的开源社区.
-				</p> <small>关键词 <cite>开源</cite></small>
-			</blockquote>
+		</div>
+	</div>
+	</div>
+	<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-4 column">
+			<h2>
+				Heading
+			</h2>
+			<p>
+				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+			</p>
+			<p>
+				 <a class="btn" href="#">View details »</a>
+			</p>
+		</div>
+		<div class="col-md-4 column">
+			<h2>
+				Heading
+			</h2>
+			<p>
+				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+			</p>
+			<p>
+				 <a class="btn" href="#">View details »</a>
+			</p>
+		</div>
+		<div class="col-md-4 column">
+			<h2>
+				Heading
+			</h2>
+			<p>
+				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+			</p>
+			<p>
+				 <a class="btn" href="#">View details »</a>
+			</p>
 		</div>
 	</div>
 </div>
