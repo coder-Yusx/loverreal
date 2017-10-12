@@ -21,7 +21,7 @@ public class HelloWorldController {
   }
 
   @RequestMapping("/hello2")
-  public List<String> hello2() {
-    return Arrays.asList(new String[] { "A", "B", "C" });
+  public String hello2() {
+	  return "frontpage/index2";
   }
 }
