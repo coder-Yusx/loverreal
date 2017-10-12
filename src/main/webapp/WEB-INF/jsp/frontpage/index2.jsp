@@ -31,26 +31,31 @@
 .border {
 	border: 1px solid black;
 }
+
+.bottom_footer {  
+       position：relative; /*or前面的是absolute就可以用*/  
+       bottom: 0px;  
+}
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
+
     <div class="container-fluid">
-    	<div class="row">
-    		<div class="col-md-12">
-    			<div style="float:right">登陆/注册</div>
-    			<hr>
-    		</div>
-    	</div>
+    	 <div class="row" style="border-bottom: 1px solid #ccc;">
+    	 	<div class="col-md-12">
+    	 		<div style="float:right;font-size: larger;">登陆/注册</div>
+    	 	</div>
+    	 </div>
 	    <div class="row">
 	    	<div class="col-md-4">
 		    	<div class="navbar-header" style="float:right">
-		        	<img src="${baseurl }/static/img/logo.jpg" alt="First slide" style="width: 75px;">
+		        	<img src="${baseurl }/static/img/logo.jpg" alt="First slide" style="width: 142px;">
 		    	</div>
 	    	</div>
-		   	<div class="col-md-4">
+		   	<div class="col-md-4" style="padding-top: 20px;">
 			   	<div style="float:right">
 				   	<ul class="nav navbar-nav" style="font-size: x-large;">
 				       	<li><a href="#">首页</a></li>
@@ -74,7 +79,7 @@
 				       </ul>
 				   </div>
 		       </div>
-		    	<div class="col-md-4">
+		    	<div class="col-md-4" style="padding-top: 20px;">
 			    	<form class="navbar-form navbar-left" role="search">
 						<div class="form-group">
 							<input type="text" class="form-control" placeholder="Search">
@@ -82,7 +87,6 @@
 						<button type="submit" class="btn btn-default">提交</button>
 					</form>
 				</div>
-				<hr>
 	    </div>
     </div>
 	
@@ -101,10 +105,10 @@
 			<img src="${baseurl }/static/img/default.jpg" alt="First slide" style="width: 100%;">
 		</div>
 		<div class="item">
-			<img src="${baseurl }/static/img/default.jpg" alt="Second slide" style="width: 100%;">
+			<img src="${baseurl }/static/img/default1.jpg" alt="Second slide" style="width: 100%;">
 		</div>
 		<div class="item">
-			<img src="${baseurl }/static/img/default.jpg" alt="Third slide" style="width: 100%;">
+			<img src="${baseurl }/static/img/default2.jpg" alt="Third slide" style="width: 100%;">
 		</div>
 	</div>
 	<!-- 轮播（Carousel）导航 -->
@@ -113,6 +117,44 @@
 	<a class="carousel-control right" href="#myCarousel" 
 	   data-slide="next">&rsaquo;</a>
 </div> 
+
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-4 column">
+			<h2>
+				Heading
+			</h2>
+			<p>
+				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+			</p>
+			<p>
+				 <a class="btn" href="#">View details »</a>
+			</p>
+		</div>
+		<div class="col-md-4 column">
+			<h2>
+				Heading
+			</h2>
+			<p>
+				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+			</p>
+			<p>
+				 <a class="btn" href="#">View details »</a>
+			</p>
+		</div>
+		<div class="col-md-4 column">
+			<h2>
+				Heading
+			</h2>
+			<p>
+				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+			</p>
+			<p>
+				 <a class="btn" href="#">View details »</a>
+			</p>
+		</div>
+	</div>
+</div>
 
 </body>
 </body>
