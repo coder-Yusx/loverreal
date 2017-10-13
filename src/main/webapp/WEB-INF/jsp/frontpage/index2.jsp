@@ -36,23 +36,47 @@
        position：relative; /*or前面的是absolute就可以用*/  
        bottom: 0px;  
 }
+
+footer {
+    background: #333;
+    color: #eee;
+    font-size: 11px;
+    padding: 20px;
+}
+ul.unstyled {
+    list-style: none;
+    padding: 0;
+}
+footer h6 {
+    color: white;
+
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+
+<script type="text/javascript">
+
+</script>
 </head>
 <body>
 
     <div class="container-fluid">
     	 <div class="row" style="border-bottom: 1px solid #ccc;">
-    	 	<div class="col-md-12">
-    	 		<div style="float:right;font-size: larger;">登陆/注册</div>
+    	 	<div class="col-md-11">
+    	 		<div style="float:right;font-size: larger;">
+	    	 		<a href="${baseurl }/hello3">登陆</a>&nbsp;|&nbsp;
+	    	 		<a href="${baseurl }/hello4">注册</a>
+    	 		</div>
+    	 	</div>
+    	 	<div class="col-md-1">
+    	 		<div>&nbsp;</div>
     	 	</div>
     	 </div>
 	    <div class="row">
 	    	<div class="col-md-4">
 		    	<div class="navbar-header" style="float:right">
-		        	<img src="${baseurl }/static/img/logo.jpg" alt="First slide" style="width: 142px;">
+		        	<img src="${baseurl }/static/img/logo.png" alt="First slide" style="width: 135px;">
 		    	</div>
 	    	</div>
 		   	<div class="col-md-4" style="padding-top: 20px;">
@@ -90,8 +114,8 @@
 	    </div>
     </div>
 	
-	
-	
+	<div>
+	<!--轮播  -->
 	<div id="myCarousel" class="carousel slide" style="width: 100%;">
 	<!-- 轮播（Carousel）指标 -->
 	<ol class="carousel-indicators">
@@ -118,6 +142,7 @@
 	   data-slide="next">&rsaquo;</a>
 </div> 
 
+<!--内容  -->
 <div class="container">
 	<div class="row clearfix">
 		<div class="col-md-4 column">
@@ -155,7 +180,48 @@
 		</div>
 	</div>
 </div>
+</div>
 
-</body>
+<!--页脚  -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <h6>Copyright &copy;新浪体育</h6>
+                </div>
+                
+                <div class="col-sm-4">
+                    <h6>关于我们</h6>
+                    <p>
+                        中国上海/2014年8月14日 — 服务于中国及全球华人社群的领先在线媒体公司新浪公司(NASDAQ GS: SINA)今日公布了截至2014年6月30日的第二季度未经审计的财务报告。
+                    </p>
+                </div>
+                
+                <div class="col-sm-2">
+                    <h6>导航</h6>
+                    <ul class="unstyled">
+                        <li><a href="">主页</a></li>
+                        <li><a href="">服务</a></li>
+                        <li><a href="">链接</a></li>
+                        <li><a href="">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-sm-2">
+                    <h6>Follow us</h6>
+                    <ul class="unstyled">
+                        <li><a href="">微博</a></li>
+                        <li><a href="">微信</a></li>
+                        <li><a href="">来往</a></li>
+                    </ul>                    
+                </div>
+                
+                <div class="col-sm-2">
+                    <h6>本网站由<span class="glyphicon glyphicon-heart"></span>Darren制作</h6>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>

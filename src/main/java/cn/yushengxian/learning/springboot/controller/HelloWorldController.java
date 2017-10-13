@@ -1,17 +1,10 @@
 package cn.yushengxian.learning.springboot.controller;
 
-import java.util.Arrays;
-import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-/**
- * @author JE鍝�
- * @email 1272434821@qq.com
- * @description:鐪嬬湅spring-boot鐨勫己澶у拰鏂逛究
- */
+
 @Controller
 public class HelloWorldController {
 
@@ -23,5 +16,15 @@ public class HelloWorldController {
   @RequestMapping("/hello2")
   public String hello2() {
 	  return "frontpage/index2";
+  }
+  
+  @RequestMapping("/hello3")
+  public String hello3() {
+	  return "frontpage/login";
+  }
+  
+  @RequestMapping("/hello4")
+  public String hello4() {
+	  return "frontpage/register";
   }
 }
