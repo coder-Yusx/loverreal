@@ -1,3 +1,4 @@
+<%@page import="com.fasterxml.jackson.annotation.JsonInclude.Include"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/common/common_tag.jsp"%>
@@ -7,58 +8,29 @@
 <html>
 <head>
 <style type="text/css">
-
-	/*bootstrap无间距栅格*/
-	/* .row.no-gutter {
-	    margin-left: 0;
-	    margin-right: 0;
+	.border {
+		border: 1px solid black;
 	}
-	
-	.row.no-gutter > [class*='col-'] {
-	    padding-right: 0;
-	    padding-left: 0;
-	} */
-	
-	/* .row{
-		margin-top: 1%;
-	}
-	
-	.a{
-	padding: 2px; 
-}
-*/
-
-.border {
-	border: 1px solid black;
-}
-
-.bottom_footer {  
-       position：relative; /*or前面的是absolute就可以用*/  
-       bottom: 0px;  
-}
-
-footer {
-    background: #333;
-    color: #eee;
-    font-size: 11px;
-    padding: 20px;
-}
-ul.unstyled {
-    list-style: none;
-    padding: 0;
-}
-footer h6 {
-    color: white;
-
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-
-<script type="text/javascript">
-
-</script>
 </head>
+<script type="text/javascript">
+	
+	//找学生
+	function find_stu(){
+		$.ajax({
+			type:"GET",
+			url:"${baseurl}/hello5",
+			contentType : "application/html; charset=utf-8",
+			success:function(data){
+				$("#content").html(data);
+			}
+		});
+	}
+	
+</script>
 <body>
 
     <div class="container-fluid">
@@ -74,36 +46,67 @@ footer h6 {
     	 	</div>
     	 </div>
 	    <div class="row">
-	    	<div class="col-md-4">
+	    	<div class="col-md-3">
 		    	<div class="navbar-header" style="float:right">
 		        	<img src="${baseurl }/static/img/logo.png" alt="First slide" style="width: 135px;">
 		    	</div>
 	    	</div>
-		   	<div class="col-md-4" style="padding-top: 20px;">
+		   	<div class="col-md-6" style="padding-top: 20px;">
 			   	<div style="float:right">
 				   	<ul class="nav navbar-nav" style="font-size: x-large;">
 				       	<li><a href="#">首页</a></li>
-				           <li class="active"><a href="#">iOS</a></li>
-				           <li><a href="#">SVN</a></li>
 				           <li class="dropdown">
-				               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-				                   Java
+				               <a href="#" class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" data-hover="dropdown">
+				                  	<!-- 传授 -->chuanshou
 				                   <b class="caret"></b>
 				               </a>
-				               <ul class="dropdown-menu">
-				                   <li><a href="#">jmeter</a></li>
-				                   <li><a href="#">EJB</a></li>
-				                   <li><a href="#">Jasper Report</a></li>
+				               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+				                   <li role="presentation"><a href="javascript:find_stu();"><!-- 找学生 -->zhaoxuesheng</a></li>
 				                   <li class="divider"></li>
-				                   <li><a href="#">分离的链接</a></li>
+				                   <li role="presentation"><a href="#"><!-- 发布课程 -->fabukecheng</a></li>
+				               </ul>
+				           </li>
+				           <li class="dropdown">
+				               <a href="#" class="dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" data-hover="dropdown">
+				                  	 <!-- 学习 -->xuexi
+				                   <b class="caret"></b>
+				               </a>
+				               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+				                   <li role="presentation"><a href="#"><!-- 找老师 -->zhaolaoshi</a></li>
 				                   <li class="divider"></li>
-				                   <li><a href="#">另一个分离的链接</a></li>
+				                   <li role="presentation"><a href="#"><!-- 发布难题 -->fabunanti</a></li>
+				               </ul>
+				           </li>
+				           <li class="dropdown">
+				               <a href="#" class="dropdown-toggle" id="dropdownMenu3" data-toggle="dropdown" data-hover="dropdown">
+				                  	 <!-- 我的账户 -->wodezhanghu
+				                   <b class="caret"></b>
+				               </a>
+				               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu3">
+				                   <li role="presentation"><a href="#"><!-- 充值 -->chongzhi</a></li>
+				                   <li class="divider"></li>
+				                   <li role="presentation"><a href="#"><!-- 提现 -->tixian</a></li>
+				                   <li class="divider"></li>
+				                   <li role="presentation"><a href="#"><!-- 交易记录 -->jiaoyijilu</a></li>
+				               </ul>
+				           </li>
+				           <li class="dropdown">
+				               <a href="#" class="dropdown-toggle" id="dropdownMenu4" data-toggle="dropdown" data-hover="dropdown">
+				                  	 <!-- 我的资料 -->wodeziliao
+				                   <b class="caret"></b>
+				               </a>
+				               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu4">
+				                   <li role="presentation"><a href="#"><!-- 基本信息 -->jibenxinxi</a></li>
+				                   <li class="divider"></li>
+				                   <li role="presentation"><a href="#"><!-- 传习记录 -->chuanxijilu</a></li>
+				                   <li class="divider"></li>
+				                   <li role="presentation"><a href="#"><!-- 积分明细 -->jifenmingxi</a></li>
 				               </ul>
 				           </li>
 				       </ul>
 				   </div>
 		       </div>
-		    	<div class="col-md-4" style="padding-top: 20px;">
+		    	<div class="col-md-3" style="padding-top: 20px;">
 			    	<form class="navbar-form navbar-left" role="search">
 						<div class="form-group">
 							<input type="text" class="form-control" placeholder="Search">
@@ -114,7 +117,7 @@ footer h6 {
 	    </div>
     </div>
 	
-	<div>
+	<div id="content">
 	<!--轮播  -->
 	<div id="myCarousel" class="carousel slide" style="width: 100%;">
 	<!-- 轮播（Carousel）指标 -->
@@ -182,46 +185,8 @@ footer h6 {
 </div>
 </div>
 
-<!--页脚  -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-2">
-                    <h6>Copyright &copy;新浪体育</h6>
-                </div>
-                
-                <div class="col-sm-4">
-                    <h6>关于我们</h6>
-                    <p>
-                        中国上海/2014年8月14日 — 服务于中国及全球华人社群的领先在线媒体公司新浪公司(NASDAQ GS: SINA)今日公布了截至2014年6月30日的第二季度未经审计的财务报告。
-                    </p>
-                </div>
-                
-                <div class="col-sm-2">
-                    <h6>导航</h6>
-                    <ul class="unstyled">
-                        <li><a href="">主页</a></li>
-                        <li><a href="">服务</a></li>
-                        <li><a href="">链接</a></li>
-                        <li><a href="">联系我们</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-sm-2">
-                    <h6>Follow us</h6>
-                    <ul class="unstyled">
-                        <li><a href="">微博</a></li>
-                        <li><a href="">微信</a></li>
-                        <li><a href="">来往</a></li>
-                    </ul>                    
-                </div>
-                
-                <div class="col-sm-2">
-                    <h6>本网站由<span class="glyphicon glyphicon-heart"></span>Darren制作</h6>
-                </div>
-            </div>
-        </div>
-    </footer>
+	<!--页脚  -->
+   <%@ include file="common/footer.jsp"%>
 
 </body>
 </html>

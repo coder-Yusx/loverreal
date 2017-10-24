@@ -27,4 +27,9 @@ public class HelloWorldController {
   public String hello4() {
 	  return "frontpage/register";
   }
+  
+  @RequestMapping("/hello5")
+  public String hello5() {
+	  return "frontpage/index3";
+  }
 }
