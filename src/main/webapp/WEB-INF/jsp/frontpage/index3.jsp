@@ -13,81 +13,19 @@
 .bg1{
 	background-color:red;
 }
+
+.select-list dd{
+	float: left;
+	    margin-right: 5px;
+}
+.selected{
+	background-color: #b5b8bd;
+}
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 
 <script type="text/javascript">
-	$(function() {
-		var html = "<option value=''>== 请选择 ==</option>";
-		$("#input_city").append(html);
-		$("#input_area").append(html);
-		$.each(
-			pdata,
-			function(idx, item) {
-				if (parseInt(item.level) == 0) {
-					html += "<option value='" + item.names + "' exid='" + item.code + "'>"
-							+ item.names + "</option>";
-				}
-		});
-		$("#input_province").append(html);
-
-		$("#input_province").change(
-			function() {
-				if ($(this).val() == "")
-					return;
-				$("#input_city option").remove();
-				$("#input_area option").remove();
-				var code = $(this).find("option:selected").attr(
-						"exid");
-				code = code.substring(0, 2);
-				var html = "<option value=''>== 请选择 ==</option>";
-				$("#input_area").append(html);
-				$.each(
-					pdata,
-					function(idx, item) {
-						if (parseInt(item.level) == 1
-								&& code == item.code
-										.substring(0, 2)) {
-							html += "<option value='" + item.names + "' exid='" + item.code + "'>"
-									+ item.names
-									+ "</option>";
-						}
-				});
-			$("#input_city").append(html);
-		});
-
-		$("#input_city")
-				.change(
-						function() {
-							if ($(this).val() == "")
-								return;
-							$("#input_area option").remove();
-							var code = $(this).find("option:selected").attr(
-									"exid");
-							code = code.substring(0, 4);
-							var html = "<option value=''>== 请选择 ==</option>";
-							$
-									.each(
-											pdata,
-											function(idx, item) {
-												if (parseInt(item.level) == 2
-														&& code == item.code
-																.substring(0, 4)) {
-													html += "<option value='" + item.names + "' exid='" + item.code + "'>"
-															+ item.names
-															+ "</option>";
-												}
-											});
-							$("#input_area").append(html);
-						});
-		//绑定
-		/* $("#input_province").val("广东省");$("#input_province").change();
-		$("#input_city").val("深圳市");$("#input_city").change();
-		$("#input_area").val("罗湖区"); */
-
-	});
-	
 	$(function($) {
 		var child=$('#circle').children();
 		child.each(function(index , domEle){
@@ -96,22 +34,114 @@
 				if($(domEle).hasClass("bg1")){
 					$(domEle).removeClass("bg1");
 				} else{
-					$(domEle).addClass("bg1");
-					//alert($(domEle).html());
-					
-					/* var sib=$(domEle).siblings();
-					child.each(function(index , domEle2){
-						$(domEle2).removeClass("bg1");
-					}); */
+					$(domEle).addClass("bg1").siblings().removeClass("bg1");;
 				}
 			});
 			
 		});
 	});
-	
+
+	$(document).ready(function() { 
+		  $("#select1 dd").click(function() { 
+		    $(this).addClass("selected").siblings().removeClass("selected"); 
+		    if ($(this).hasClass("select-all")) { 
+		      $("#selectA").remove(); 
+		    } else { 
+		      var copyThisA = $(this).clone(); 
+		      if ($("#selectA").length > 0) { 
+		        $("#selectA a").html($(this).text()); 
+		      } else { 
+		        $(".select-result dl").append(copyThisA.attr("id", "selectA")); 
+		      } 
+		    } 
+		  }); 
+		  $("#select2 dd").click(function() {
+		    $(this).addClass("selected").siblings().removeClass("selected"); 
+		    if ($(this).hasClass("select-all")) { 
+		      $("#selectB").remove(); 
+		    } else { 
+		      var copyThisB = $(this).clone(); 
+		      if ($("#selectB").length > 0) { 
+		        $("#selectB a").html($(this).text()); 
+		      } else { 
+		        $(".select-result dl").append(copyThisB.attr("id", "selectB")); 
+		      } 
+		    } 
+		  }); 
+		  /* $("#selectA").live("click", 
+		  function() { 
+		    $(this).remove(); 
+		    $("#select1 .select-all").addClass("selected").siblings().removeClass("selected"); 
+		  }); 
+		  $("#selectB").live("click", 
+		  function() { 
+		    $(this).remove(); 
+		    $("#select2 .select-all").addClass("selected").siblings().removeClass("selected"); 
+		  }); 
+		  $(".select dd").live("click", 
+		  function() { 
+		    if ($(".select-result dd").length > 1) { 
+		      $(".select-no").hide(); 
+		    } else { 
+		      $(".select-no").show(); 
+		    } 
+		  });  */
+		  
+		  $(".select-p").on("click", "#selectA",
+		  function() { 
+		    $(this).remove(); 
+		    $("#select1 .select-all").addClass("selected").siblings().removeClass("selected"); 
+		  }); 
+		  $(".select-p").on("click", "#selectB",
+		  function() { 
+		    $(this).remove(); 
+		    $("#select2 .select-all").addClass("selected").siblings().removeClass("selected"); 
+		  }); 
+		  $(".select").on("click", "dd",
+		  function() { 
+		    if ($(".select-result dd").length > 1) { 
+		      $(".select-no").hide(); 
+		    } else { 
+		      $(".select-no").show(); 
+		    } 
+		  });
+		});
 </script>
 </head>
 <body>
+<ul class="select">  
+    <li class="select-list">  
+      <dl id="select1">  
+        <dt>上装：</dt>  
+        <dd class="select-all selected"><a href="#">全部</a></dd>  
+        <dd><a href="#">针织衫</a></dd>  
+        <dd><a href="#">毛呢外套</a></dd>  
+        <dd><a href="#">T恤</a></dd>  
+        <dd><a href="#">羽绒服</a></dd>  
+        <dd><a href="#">棉衣</a></dd>  
+        <dd><a href="#">卫衣</a></dd>  
+        <dd><a href="#">风衣</a></dd>  
+      </dl>  
+    </li>  
+    <li class="select-list">  
+      <dl id="select2">  
+        <dt>裤装：</dt>  
+        <dd class="select-all selected"><a href="#">全部</a></dd>  
+        <dd><a href="#">牛仔裤</a></dd>  
+        <dd><a href="#">小脚/铅笔裤</a></dd>  
+        <dd><a href="#">休闲裤</a></dd>  
+        <dd><a href="#">打底裤</a></dd>  
+        <dd><a href="#">哈伦裤</a></dd>  
+      </dl>  
+    </li>  
+    <li class="select-result">  
+      <dl class="select-p">  
+        <dt>已选条件：</dt>  
+        <dd class="select-no">暂时没有选择过滤条件</dd>  
+      </dl>  
+    </li>  
+  </ul>
+  
 	<div class="container border">
 		<div id="circle" class="row">
 			<div class="col-md-1">圈子:</div>
@@ -133,23 +163,10 @@
 			<div class="col-md-1">分类</div>
 			<div class="col-md-11"></div>
 		</div>
-
-		<div class="row">
-			<div class="col-md-1">所在区域</div>
-			<div class="col-md-3">
-				<select name="input_province" id="input_province"
-					class="form-control">
-				</select>
-			</div>
-			<div class="col-md-3">
-				<select name="input_city" id="input_city" class="form-control">
-				</select>
-			</div>
-			<div class="col-md-4">
-				<select name="input_area" id="input_area" class="form-control">
-				</select>
-			</div>
-		</div>
 	</div>
 </body>
+
+<script type="text/javascript">
+
+</script>
 </html>
