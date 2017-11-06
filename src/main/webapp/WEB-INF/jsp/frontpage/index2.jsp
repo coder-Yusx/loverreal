@@ -57,50 +57,50 @@
 				       	<li><a href="#">首页</a></li>
 				           <li class="dropdown">
 				               <a href="#" class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" data-hover="dropdown">
-				                  	<!-- 传授 -->chuanshou
+				                  	传授
 				                   <b class="caret"></b>
 				               </a>
 				               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-				                   <li role="presentation"><a href="javascript:find_stu();"><!-- 找学生 -->zhaoxuesheng</a></li>
+				                   <li role="presentation"><a href="javascript:find_stu();">找学生</a></li>
 				                   <li class="divider"></li>
-				                   <li role="presentation"><a href="#"><!-- 发布课程 -->fabukecheng</a></li>
+				                   <li role="presentation"><a href="#">发布课程</a></li>
 				               </ul>
 				           </li>
 				           <li class="dropdown">
 				               <a href="#" class="dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" data-hover="dropdown">
-				                  	 <!-- 学习 -->xuexi
+				                  	 学习
 				                   <b class="caret"></b>
 				               </a>
 				               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
-				                   <li role="presentation"><a href="#"><!-- 找老师 -->zhaolaoshi</a></li>
+				                   <li role="presentation"><a href="#">找老师</a></li>
 				                   <li class="divider"></li>
-				                   <li role="presentation"><a href="#"><!-- 发布难题 -->fabunanti</a></li>
+				                   <li role="presentation"><a href="#">发布难题</a></li>
 				               </ul>
 				           </li>
 				           <li class="dropdown">
 				               <a href="#" class="dropdown-toggle" id="dropdownMenu3" data-toggle="dropdown" data-hover="dropdown">
-				                  	 <!-- 我的账户 -->wodezhanghu
+				                  	 我的账户 
 				                   <b class="caret"></b>
 				               </a>
 				               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu3">
-				                   <li role="presentation"><a href="#"><!-- 充值 -->chongzhi</a></li>
+				                   <li role="presentation"><a href="#">充值</a></li>
 				                   <li class="divider"></li>
-				                   <li role="presentation"><a href="#"><!-- 提现 -->tixian</a></li>
+				                   <li role="presentation"><a href="#">提现</a></li>
 				                   <li class="divider"></li>
-				                   <li role="presentation"><a href="#"><!-- 交易记录 -->jiaoyijilu</a></li>
+				                   <li role="presentation"><a href="#">交易记录</a></li>
 				               </ul>
 				           </li>
 				           <li class="dropdown">
 				               <a href="#" class="dropdown-toggle" id="dropdownMenu4" data-toggle="dropdown" data-hover="dropdown">
-				                  	 <!-- 我的资料 -->wodeziliao
+				                  	 我的资料
 				                   <b class="caret"></b>
 				               </a>
 				               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu4">
-				                   <li role="presentation"><a href="#"><!-- 基本信息 -->jibenxinxi</a></li>
+				                   <li role="presentation"><a href="#">基本信息</a></li>
 				                   <li class="divider"></li>
-				                   <li role="presentation"><a href="#"><!-- 传习记录 -->chuanxijilu</a></li>
+				                   <li role="presentation"><a href="#">传习记录</a></li>
 				                   <li class="divider"></li>
-				                   <li role="presentation"><a href="#"><!-- 积分明细 -->jifenmingxi</a></li>
+				                   <li role="presentation"><a href="#">积分明细</a></li>
 				               </ul>
 				           </li>
 				       </ul>

@@ -7,7 +7,7 @@
 <html>
 <head>
 <style type="text/css">
-.border {
+/* .border {
 	border: 1px solid black;
 }
 .bg1{
@@ -20,6 +20,23 @@
 }
 .selected{
 	background-color: #b5b8bd;
+} */
+#location{
+	font-size: small;
+}
+.selected{
+	background-color: #b5b8bd;
+}
+
+ul{
+	  padding: 0px;
+}
+.select-list li{
+	font-size: large;
+    list-style-type: none;
+    float: left;
+    margin-right: 5px;
+    width: 7%;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -27,141 +44,60 @@
 
 <script type="text/javascript">
 	$(function($) {
-		var child=$('#circle').children();
-		child.each(function(index , domEle){
-			
-			$(domEle).bind("click", function(){
-				if($(domEle).hasClass("bg1")){
-					$(domEle).removeClass("bg1");
-				} else{
-					$(domEle).addClass("bg1").siblings().removeClass("bg1");;
-				}
-			});
-			
-		});
-	});
-
-	$(document).ready(function() { 
-		  $("#select1 dd").click(function() { 
-		    $(this).addClass("selected").siblings().removeClass("selected"); 
-		    if ($(this).hasClass("select-all")) { 
-		      $("#selectA").remove(); 
-		    } else { 
-		      var copyThisA = $(this).clone(); 
-		      if ($("#selectA").length > 0) { 
-		        $("#selectA a").html($(this).text()); 
-		      } else { 
-		        $(".select-result dl").append(copyThisA.attr("id", "selectA")); 
-		      } 
-		    } 
-		  }); 
-		  $("#select2 dd").click(function() {
-		    $(this).addClass("selected").siblings().removeClass("selected"); 
-		    if ($(this).hasClass("select-all")) { 
-		      $("#selectB").remove(); 
-		    } else { 
-		      var copyThisB = $(this).clone(); 
-		      if ($("#selectB").length > 0) { 
-		        $("#selectB a").html($(this).text()); 
-		      } else { 
-		        $(".select-result dl").append(copyThisB.attr("id", "selectB")); 
-		      } 
-		    } 
-		  }); 
-		  /* $("#selectA").live("click", 
-		  function() { 
-		    $(this).remove(); 
-		    $("#select1 .select-all").addClass("selected").siblings().removeClass("selected"); 
-		  }); 
-		  $("#selectB").live("click", 
-		  function() { 
-		    $(this).remove(); 
-		    $("#select2 .select-all").addClass("selected").siblings().removeClass("selected"); 
-		  }); 
-		  $(".select dd").live("click", 
-		  function() { 
-		    if ($(".select-result dd").length > 1) { 
-		      $(".select-no").hide(); 
-		    } else { 
-		      $(".select-no").show(); 
-		    } 
-		  });  */
-		  
-		  $(".select-p").on("click", "#selectA",
-		  function() { 
-		    $(this).remove(); 
-		    $("#select1 .select-all").addClass("selected").siblings().removeClass("selected"); 
-		  }); 
-		  $(".select-p").on("click", "#selectB",
-		  function() { 
-		    $(this).remove(); 
-		    $("#select2 .select-all").addClass("selected").siblings().removeClass("selected"); 
-		  }); 
-		  $(".select").on("click", "dd",
-		  function() { 
-		    if ($(".select-result dd").length > 1) { 
-		      $(".select-no").hide(); 
-		    } else { 
-		      $(".select-no").show(); 
-		    } 
-		  });
-		});
+		 $(".select-list li").click(function() { 
+			 	if($(this).hasClass("selected")){
+			 		$(this).removeClass("selected");
+			 	}
+			 	else
+			 	{
+			 		$(this).addClass("selected").siblings().removeClass("selected");
+			 	}
+			 	
+			 	var str="<li>"+$(this).val()+"</li>";
+			 	$("#child_content ul").html(str);
+			 	if($("#child_content").length > 0){
+			 		$("#child_title").html("分类");
+			 	}
+			 	
+			 	$("#location_content").html($(this).html());
+		 });   
+	}); 
 </script>
 </head>
 <body>
-<ul class="select">  
-    <li class="select-list">  
-      <dl id="select1">  
-        <dt>上装：</dt>  
-        <dd class="select-all selected"><a href="#">全部</a></dd>  
-        <dd><a href="#">针织衫</a></dd>  
-        <dd><a href="#">毛呢外套</a></dd>  
-        <dd><a href="#">T恤</a></dd>  
-        <dd><a href="#">羽绒服</a></dd>  
-        <dd><a href="#">棉衣</a></dd>  
-        <dd><a href="#">卫衣</a></dd>  
-        <dd><a href="#">风衣</a></dd>  
-      </dl>  
-    </li>  
-    <li class="select-list">  
-      <dl id="select2">  
-        <dt>裤装：</dt>  
-        <dd class="select-all selected"><a href="#">全部</a></dd>  
-        <dd><a href="#">牛仔裤</a></dd>  
-        <dd><a href="#">小脚/铅笔裤</a></dd>  
-        <dd><a href="#">休闲裤</a></dd>  
-        <dd><a href="#">打底裤</a></dd>  
-        <dd><a href="#">哈伦裤</a></dd>  
-      </dl>  
-    </li>  
-    <li class="select-result">  
-      <dl class="select-p">  
-        <dt>已选条件：</dt>  
-        <dd class="select-no">暂时没有选择过滤条件</dd>  
-      </dl>  
-    </li>  
-  </ul>
-  
 	<div class="container border">
+		<div id="location" class="row">
+			<div id="location_title" class="col-md-1">当前选项：</div>
+			<div id="location_content" class="col-md-11"></div>
+		</div>
+	
 		<div id="circle" class="row">
-			<div class="col-md-1">圈子:</div>
-			<div class="col-md-1">1</div>
-			<div class="col-md-1">1</div>
-			<div class="col-md-1">1</div>
-			<div class="col-md-1">1</div>
-			<div class="col-md-1">1</div>
-			<div class="col-md-1">1</div>
-			<div class="col-md-1">1</div>
-			<div class="col-md-1">1</div>
-			<div class="col-md-1">1</div>
-			<div class="col-md-1">1</div>
-
-			<div class="col-md-1">更多>></div>
+			<div id="circle_title" class="col-md-1">圈子:</div>
+			<div id="circle_content" class="col-md-11">
+				<ul class="select-list">  
+				    <li value="1">  
+				    	商圈
+				    </li>
+				    <li value="2">  
+				    	商圈
+				    </li> 
+				    <li value="3">  
+				    	商圈
+				    </li> 
+				    <li value="4">  
+				    	商圈
+				    </li>
+				 </ul>
+			</div>
 		</div>
 
-		<div class="row">
-			<div class="col-md-1">分类</div>
-			<div class="col-md-11"></div>
+		<div id="child" class="row">
+			<div id="child_title" class="col-md-1"></div>
+			<div id="child_content" class="col-md-11">
+				<ul class="select-list">
+					
+				</ul>
+			</div>
 		</div>
 	</div>
 </body>

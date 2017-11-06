@@ -18,7 +18,6 @@ public abstract class CommonServiceImpl<T,PK extends Serializable> implements Co
     private Mapper<T> mapper;
 
     public T selectByPrimaryKey(PK entityId) {
-
         return mapper.selectByPrimaryKey(entityId);
     }
 
