@@ -4,7 +4,6 @@
 
 <script type="text/javascript" src="${baseurl}/static/js/bootstrap3/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="${baseurl}/static/js/bootstrap-hover-dropdown.min.js"></script>
-<script type="text/javascript" src="${baseurl}/static/js/pdata.js"></script>
 
 <%-- <script type="text/javascript" src="${baseurl}/static/mould/assets/javascripts/pixel-admin.min.js"></script>
 <script type="text/javascript" src="${baseurl}/static/mould/assets/javascripts/ie.min.js"></script>

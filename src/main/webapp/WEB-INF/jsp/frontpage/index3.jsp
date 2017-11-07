@@ -21,7 +21,12 @@
 .selected{
 	background-color: #b5b8bd;
 } */
-#location{
+
+.row{
+	 margin-top: 5px;
+}
+
+.little_font1{
 	font-size: small;
 }
 .selected{
@@ -29,14 +34,16 @@
 }
 
 ul{
-	  padding: 0px;
+	padding: 0px;
 }
 .select-list li{
 	font-size: large;
     list-style-type: none;
     float: left;
-    margin-right: 5px;
-    width: 7%;
+    margin-left: 3px;
+    margin-right: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -44,7 +51,7 @@ ul{
 
 <script type="text/javascript">
 	$(function($) {
-		 $(".select-list li").click(function() { 
+		 $("#circle_ul li").click(function() { 
 			 	if($(this).hasClass("selected")){
 			 		$(this).removeClass("selected");
 			 	}
@@ -54,27 +61,39 @@ ul{
 			 	}
 			 	
 			 	var str="<li>"+$(this).val()+"</li>";
-			 	$("#child_content ul").html(str);
-			 	if($("#child_content").length > 0){
+			 	$("#child_ul").html(str);
+			 	if($("#child_ul").length > 0){
 			 		$("#child_title").html("分类");
 			 	}
 			 	
 			 	$("#location_content").html($(this).html());
-		 });   
+		 });  
+		 
+		 $("#child_ul").on("click","li",function(){
+			 if($(this).hasClass("selected")){
+			 		$(this).removeClass("selected");
+			 	}
+			 	else
+			 	{
+			 		$(this).addClass("selected").siblings().removeClass("selected");
+			 	}
+			 	
+			 	$("#location_content").append($(this).html());
+		 });
 	}); 
 </script>
 </head>
 <body>
-	<div class="container border">
-		<div id="location" class="row">
-			<div id="location_title" class="col-md-1">当前选项：</div>
+	<div class="container">
+		<div id="location" class="row border">
+			<div id="location_title" class="col-md-1 little_font1">当前选项：</div>
 			<div id="location_content" class="col-md-11"></div>
 		</div>
 	
-		<div id="circle" class="row">
+		<div id="circle" class="row border">
 			<div id="circle_title" class="col-md-1">圈子:</div>
 			<div id="circle_content" class="col-md-11">
-				<ul class="select-list">  
+				<ul id="circle_ul" class="select-list">  
 				    <li value="1">  
 				    	商圈
 				    </li>
@@ -94,12 +113,46 @@ ul{
 		<div id="child" class="row">
 			<div id="child_title" class="col-md-1"></div>
 			<div id="child_content" class="col-md-11">
-				<ul class="select-list">
+				<ul id="child_ul" class="select-list">
 					
 				</ul>
 			</div>
 		</div>
-	</div>
+		
+		<div class="row">
+			<div class="col-md-8">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="media">
+							<div class="media-body">
+								<span class="little_font1">来自：IT圈>大前端</span>
+								<h4>Android，IOS和微信端，等移动端页面设计</h4>
+								<div>
+									<a href="#"><img class="img-circle" src="${baseurl }/static/img/headpic.jpg" width="40px;"><span> 易大师</span></a>
+									<span class="label label-success"> 资深前端工程师</span> <span class="label label-success"> 资深前端工程师</span>
+								</div>
+								<div>开课时间：2017-10-24 | 持续时间：50min | 传授地点：上门传授</div>
+								<div class="media">
+									<a class="media-left" href="#">
+										<img class="media-object" src="${baseurl }/static/img/logo.png" alt="媒体对象" width="100px;">
+									</a>
+									<div class="media-body">
+										<!-- <h4 class="media-heading">媒体标题</h4> -->
+										这是一些示例文本。这是一些示例文本。
+										这是一些示例文本。这是一些示例文本。
+										这是一些示例文本。这是一些示例文本。
+										这是一些示例文本。这是一些示例文本。
+										这是一些示例文本。这是一些示例文本。
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> 
+			<div class="col-md-4"></div>
+		</div>
+		</div>
 </body>
 
 <script type="text/javascript">
