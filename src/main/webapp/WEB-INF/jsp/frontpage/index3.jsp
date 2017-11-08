@@ -95,15 +95,12 @@ ul{
 			<div id="circle_content" class="col-md-11">
 				<ul id="circle_ul" class="select-list">  
 				    <li value="1">  
-				    	商圈
+				    	IT圈
 				    </li>
 				    <li value="2">  
-				    	商圈
+				    	金融圈
 				    </li> 
 				    <li value="3">  
-				    	商圈
-				    </li> 
-				    <li value="4">  
 				    	商圈
 				    </li>
 				 </ul>
@@ -120,8 +117,8 @@ ul{
 		</div>
 		
 		<div class="row">
-			<div class="col-md-8">
-				<div class="row">
+			<div class="col-md-9">
+				<div class="row border">
 					<div class="col-md-12">
 						<div class="media">
 							<div class="media-body">
@@ -129,7 +126,7 @@ ul{
 								<h4>Android，IOS和微信端，等移动端页面设计</h4>
 								<div>
 									<a href="#"><img class="img-circle" src="${baseurl }/static/img/headpic.jpg" width="40px;"><span> 易大师</span></a>
-									<span class="label label-success"> 资深前端工程师</span> <span class="label label-success"> 资深前端工程师</span>
+									<span class="label label-success"> 资深前端工程师</span> <span class="label label-success"> 十年前端经验</span>
 								</div>
 								<div>开课时间：2017-10-24 | 持续时间：50min | 传授地点：上门传授</div>
 								<div class="media">
@@ -150,7 +147,7 @@ ul{
 					</div>
 				</div>
 			</div> 
-			<div class="col-md-4"></div>
+			<div class="col-md-3"></div>
 		</div>
 		</div>
 </body>
