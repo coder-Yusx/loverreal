@@ -1,4 +1,5 @@
 <script type="text/javascript" src="${baseurl}/static/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="${baseurl}/static/js/jqthumb.js"></script>
 <%-- <script type="text/javascript" src="${baseurl}/static/mould/assets/javascripts/jquery-ui-extras.min.js"></script>
 <script type="text/javascript" src="${baseurl}/static/mould/assets/javascripts/jquery.mockjax.js"></script> --%>
 
